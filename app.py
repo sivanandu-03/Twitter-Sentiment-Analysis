@@ -1,5 +1,11 @@
+import os
 import pickle
 import streamlit as st
+
+if os.path.exists('trained_model.sav'):
+    print("Model file found!")
+else:
+    print("Model file not found!")
 
 
 sentiment_model = pickle.load(open('trained_model.sav','rb'))
